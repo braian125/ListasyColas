@@ -45,11 +45,20 @@ public class ListaLigada
 
     public String Desencolar(int pI)
     {
-        //String c
+        String codDesencolado;
+        Nodo p = cabezas[pI].GetLiga();
+        codDesencolado = p.getCodigo();
+        if(p == ultimos[pI]){
+            ultimos[pI] = cabezas[pI];
+        }
+        return codDesencolado;
     }
 
-
-    /*public void MostrarCola() {
-
-    }*/
+    public void MostrarCola(int pI) {
+        Nodo p = cabezas[pI].GetLiga();
+        while (p != null) {
+            System.out.println(p.getCodigo() + "\t" + p.getValor() + "\n");
+            p = p.GetLiga();
+        }
+    }
 }

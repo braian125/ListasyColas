@@ -30,9 +30,11 @@ public class Supermercado {
             System.out.println("\n");
             do
             {
+                System.out.println(n);
                 colaIndicada = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese numero de la cola (-1 para salir):"));
+                System.out.println(colaIndicada);
             }
-            while(colaIndicada != -1 || colaIndicada > n-1);
+            while(colaIndicada < -1 || colaIndicada > n-1);
             if(colaIndicada != -1)
             {
                 do

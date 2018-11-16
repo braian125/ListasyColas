@@ -12,12 +12,13 @@ public class Supermercado {
      */
     public static void main(String[] args)
     {
-        int n, colaIndicada;
+        int n;
+        /*int colaIndicada;
         char opc;
         String aCod;
-        double aVC;
+        double aVC;*/
 
-        do
+        /*do
         {
             n = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el numero de colas a procesar", "Entrada"));
         }
@@ -47,6 +48,9 @@ public class Supermercado {
                             break;
                         case '2':
                             //Desencolar
+                            if(!objColas.ColaVacia(colaIndicada)) {
+                                JOptionPane.showInputDialog(null, "El codigo desencolado es "+objColas.Desencolar(colaIndicada));
+                            }
                             break;
                         case '3':
                             if(objColas.ColaVacia(colaIndicada)) {
@@ -68,7 +72,7 @@ public class Supermercado {
                 }while(opc != '5');
             }
         }
-        while(colaIndicada != -1);
+        while(colaIndicada != -1);*/
     }
 
     static char Menu(int pI)

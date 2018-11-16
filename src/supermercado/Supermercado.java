@@ -12,6 +12,17 @@ public class Supermercado {
      */
     public static void main(String[] args)
     {
+        int n, colaIndicada;
+        char opc;
+        String aCod;
+        double aVC;
+
+        do
+        {
+            n = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el numero de colas a procesar", "Entrada"));
+        }
+        while(n < 0);
+
         ListaLigada objColas = new ListaLigada(n);
         do
         {
@@ -29,7 +40,13 @@ public class Supermercado {
                     System.out.println("\n");
                     switch (opc) {
                         case '1':
-
+                            //Encolar
+                            aCod = JOptionPane.showInputDialog(null, "Ingrese código:", "Entrada", JOptionPane.INFORMATION_MESSAGE);
+                            aVC = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese valor compra", "Entrada", JOptionPane.INFORMATION_MESSAGE));
+                            objColas.Encolar(colaIndicada, aCod, aVC);
+                            break;
+                        case '2':
+                            //Desencolar
                             break;
                         case '3':
                             if(objColas.ColaVacia(colaIndicada)) {
@@ -39,6 +56,7 @@ public class Supermercado {
                             }
                             break;
                         case '4':
+                            //Mostrar Cola
                             System.out.println("El acumulado de la cola #"+ colaIndicada +" es $"+objColas.getAcumulado(colaIndicada));
                             break;
                         case '5':

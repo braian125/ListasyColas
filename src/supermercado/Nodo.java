@@ -35,7 +35,7 @@ public class Nodo {
         liga = pLiga;
     }
 
-    public double getLiga() {
+    public Nodo GetLiga() {
         return liga;
     }
 }
